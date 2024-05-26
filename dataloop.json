@@ -1,0 +1,114 @@
+{
+  "name": "quality-score-generator-v2",
+  "displayName": "Quality scores generator",
+  "description": "Quality scores generator",
+  "version": "0.0.23",
+  "scope": "project",
+  "attributes": {
+    "Category": "Element",
+    "Provider": "Dataloop",
+    "Element Type": "Function"
+  },
+  "components": {
+    "toolbars": [
+      {
+        "displayName": "Quality scores generator",
+        "invoke": {
+          "type": "function",
+          "namespace": "quality-scores-generator.quality_scores_generator.dataset_scores_generator"
+        },
+        "location": "datasetBrowserApps",
+        "icon": "icon-dl-edit"
+      }
+    ],
+    "modules": [
+      {
+        "name": "quality_scores_generator",
+        "entryPoint": "service_runner.py",
+        "className": "ServiceRunner",
+        "functions": [
+          {
+            "name": "calculate_quality_scores",
+            "description": "Calculate quality scores on a single item",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "output": [
+            ],
+            "displayName": "Item Quality Scores Calculator"
+          },
+          {
+            "name": "dataset_scores_generator",
+            "description": "Calculate quality scores for a dataset",
+            "input": [
+              {
+                "type": "Dataset",
+                "name": "dataset"
+              }
+            ],
+            "output": [
+            ],
+            "displayName": "Dataset Quality Scores Calculator"
+          }
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "quality-scores-generator",
+        "moduleName": "quality_scores_generator",
+        "runtime": {
+          "podType": "highmem-s",
+          "concurrency": 10,
+          "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 0,
+            "maxReplicas": 2,
+            "queueLength": 100
+          }
+        },
+        "versions": {
+          "dtlpy": "1.90.37"
+        },
+        "executionTimeout": 360000
+      }
+    ],
+    "triggers": [
+      {
+        "name": "calculate-quality-scores-on-item",
+        "active": true,
+        "type": "Event",
+        "namespace": "services.quality-scores-generator",
+        "spec": {
+          "filter": {
+            "$and": [
+              {
+                "metadata.system.mimetype": "image/*"
+              },
+              {
+                "hidden": false
+              },
+              {
+                "type": "file"
+              }
+            ]
+          },
+          "executionMode": "Always",
+          "resource": "Item",
+          "actions": [
+            "Created"
+          ],
+          "input": {},
+          "operation": {
+            "type": "function",
+            "functionName": "calculate_quality_scores"
+          }
+        }
+      }
+    ]
+  }
+}
