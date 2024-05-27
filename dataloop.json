@@ -6,9 +6,6 @@
   "scope": "public",
   "attributes": {
     "Category": "Application",
-    "scope": "project",
-    "attributes": {
-      "Category": "Element",
       "Provider": "Dataloop",
       "Element Type": "Function"
     },
@@ -115,4 +112,3 @@
       ]
     }
   }
-}
