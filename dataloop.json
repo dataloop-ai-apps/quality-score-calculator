@@ -9,6 +9,12 @@
       "Provider": "Dataloop",
       "Element Type": "Function"
     },
+    "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/quality-score-calculator.git",
+    "gitTag": "0.0.23"
+  },
+
     "components": {
       "toolbars": [
         {
