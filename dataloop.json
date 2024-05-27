@@ -3,9 +3,9 @@
   "displayName": "Quality scores generator",
   "description": "Quality scores generator",
   "version": "0.0.23",
-  "scope": "project",
+  "scope": "public",
   "attributes": {
-    "Category": "Element",
+    "Category": "Application",
     "Provider": "Dataloop",
     "Element Type": "Function"
   },
