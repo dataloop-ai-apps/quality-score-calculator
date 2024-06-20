@@ -142,17 +142,7 @@ class ServiceRunner(dl.BaseServiceRunner):
 
 
 if __name__ == '__main__':
-    dl.setenv('rc')
-    # project = dl.projects.get(project_id='2bb16c5f-081f-4afb-91e0-78699c1b3476')  # Embeddings Demo (CLIP)
-    # project = dl.projects.get(project_name='text-project')  # Embeddings Demo (CLIP)
-    project = dl.projects.get(project_name='roni-tests')
-
-    # dataset = project.datasets.get(dataset_name='Training Set')
-    # dataset = project.datasets.get(dataset_name='roni-test')
-    dataset = project.datasets.get(dataset_name='ImageNet')
-
-    # dataset = project.datasets.get(dataset_name='test-quality')
+    project = dl.projects.get(project_name='')
+    dataset = project.datasets.get(dataset_name='')
     s = ServiceRunner()
     s.dataset_scores_generator(dataset=dataset)
-    # item = dl.items.get(item_id='6628f6477ad6f3dbb091a470')
-    # s.calculate_quality_scores(item)
