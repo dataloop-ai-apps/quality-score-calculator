@@ -2,7 +2,7 @@
   "name": "quality-score-generator-app",
   "displayName": "Quality scores generator",
   "description": "Quality scores generator",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "scope": "public",
   "attributes": {
     "Category": "Application",
@@ -12,7 +12,7 @@
     "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/quality-score-calculator.git",
-    "gitTag": "0.0.24"
+    "gitTag": "0.0.25"
   },
 
     "components": {
