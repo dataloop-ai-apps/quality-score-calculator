@@ -137,7 +137,8 @@ class ServiceRunner(dl.BaseServiceRunner):
                     f'Finished calculating quality scores for {pages.items_count} items. Calculation time:  {time.time() - tic}')
 
         # Remove local paths
-        shutil.rmtree(local_path)
+        if os.path.exists(local_path):
+            shutil.rmtree(local_path)
 
 
 if __name__ == '__main__':
