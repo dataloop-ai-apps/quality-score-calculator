@@ -7,7 +7,8 @@
   "attributes": {
     "Category": "Application",
     "Provider": "Dataloop",
-    "Element Type": "Function"
+    "Element Type": "Function",
+    "License": "Apache 2.0"
   },
   "codebase": {
     "type": "git",
@@ -41,8 +42,7 @@
                 "name": "item"
               }
             ],
-            "output": [
-            ],
+            "output": [],
             "displayName": "Item Quality Scores Calculator"
           },
           {
@@ -54,8 +54,7 @@
                 "name": "dataset"
               }
             ],
-            "output": [
-            ],
+            "output": [],
             "displayName": "Dataset Quality Scores Calculator"
           }
         ]
