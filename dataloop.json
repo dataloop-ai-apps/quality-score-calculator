@@ -5,11 +5,14 @@
   "version": "0.0.28",
   "scope": "public",
   "attributes": {
-    "Category": "Application",
-    "Provider": "Dataloop",
-    "Element Type": "Function",
-    "License": "Apache 2.0"
-  },
+      "Category": "Application",
+      "Provider": "Dataloop",
+      "Application Type": "Function",
+      "Media Type": [
+        "Image"
+      ],
+      "License": "Apache 2.0"
+    },
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/quality-score-calculator.git",
