@@ -1,6 +1,6 @@
 {
   "name": "quality-score-generator-app",
-  "displayName": "Quality scores generator",
+  "displayName": "Quality Scores Generator",
   "description": "This app evaluates image quality by generating scores for Blurriness/Sharpness and Darkness/Brightness. The 'Clean Up' tab in the data management interface leverages these scores, among other criteria, to filter and refine datasets effectively.",
   "version": "0.0.28",
   "scope": "public",
