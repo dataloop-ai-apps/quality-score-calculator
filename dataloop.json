@@ -1,18 +1,18 @@
 {
   "name": "quality-score-generator-app",
-  "displayName": "Quality scores generator",
-  "description": "Quality scores generator",
+  "displayName": "Quality Scores Generator",
+  "description": "This app evaluates image quality by generating scores for Blurriness/Sharpness and Darkness/Brightness. The 'Clean Up' tab in the data management interface leverages these scores, among other criteria, to filter and refine datasets effectively.",
   "version": "0.0.28",
   "scope": "public",
   "attributes": {
-      "Category": "Application",
-      "Provider": "Dataloop",
-      "Application Type": "Function",
-      "Media Type": [
-        "Image"
-      ],
-      "License": "Apache 2.0"
-    },
+    "Category": "Application",
+    "Provider": "Dataloop",
+    "Application Type": "Function",
+    "Media Type": [
+      "Image"
+    ],
+    "License": "Apache 2.0"
+  },
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/quality-score-calculator.git",
@@ -38,7 +38,7 @@
         "functions": [
           {
             "name": "calculate_quality_scores",
-            "description": "Calculate quality scores on a single item",
+            "description": "Calculate quality scores: Blurriness and Darkness, on a single item",
             "input": [
               {
                 "type": "Item",
@@ -50,7 +50,7 @@
           },
           {
             "name": "dataset_scores_generator",
-            "description": "Calculate quality scores for a dataset",
+            "description": "Calculate quality scores: Blurriness and Darkness, for a dataset",
             "input": [
               {
                 "type": "Dataset",
