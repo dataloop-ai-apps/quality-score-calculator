@@ -8,9 +8,7 @@
     "Category": "Application",
     "Provider": "Dataloop",
     "Application Type": "Function",
-    "Media Type": [
-      "Image"
-    ],
+    "Media Type": ["Image"],
     "License": "Apache 2.0"
   },
   "codebase": {
@@ -21,6 +19,7 @@
   "components": {
     "toolbars": [
       {
+        "name": "quality-scores-generator",
         "displayName": "Quality scores generator",
         "invoke": {
           "type": "function",
@@ -103,9 +102,7 @@
           },
           "executionMode": "Always",
           "resource": "Item",
-          "actions": [
-            "Created"
-          ],
+          "actions": ["Created"],
           "input": {},
           "operation": {
             "type": "function",
