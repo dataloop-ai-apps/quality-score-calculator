@@ -7,8 +7,10 @@
   "attributes": {
     "Category": "Application",
     "Provider": "Dataloop",
-    "Application Type": "Function",
-    "Media Type": ["Image"],
+    "Application Type": ["Function","Pipeline Node"],
+    "Media Type": [
+      "Image"
+    ],
     "License": "Apache 2.0"
   },
   "codebase": {
@@ -29,6 +31,40 @@
         "icon": "icon-dl-edit"
       }
     ],
+    "pipelineNodes": [
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "quality-scores-generator.quality_scores_generator.calculate_quality_scores"
+        },
+        "categories": ["image-utils"],
+        "name": "calculate_quality_scores",
+        "displayName": "Calculate Quality Scores",
+        "description": "Calculate quality scores: Blurriness and Darkness, on a single item",
+        "scope": "node",
+        "configuration": {
+          "fields": [
+            {
+              "name": "name",
+              "title": "Node Name",
+              "props": {
+                "title": true,
+                "type": "string",
+                "default": "Calculate Quality Scores",
+                "required": true,
+                "placeholder": "Insert node name"
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+              "widget": "dl-input"
+            }
+          ]
+        }
+      }],
     "modules": [
       {
         "name": "quality_scores_generator",
