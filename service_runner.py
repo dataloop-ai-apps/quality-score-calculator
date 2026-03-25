@@ -88,7 +88,7 @@ class ServiceRunner(dl.BaseServiceRunner):
 
             item.update()
         except Exception as e:
-            logger.warning(f"Error occurred while handling: {e}. Skipped item: {item.id}")
+            logger.warning("Error occurred while handling: %s. Skipped item: %s", type(e).__name__, item.id)
 
         finally:
             if pbar is not None:
