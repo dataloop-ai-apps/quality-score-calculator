@@ -106,7 +106,7 @@
         "runtime": {
           "podType": "highmem-s",
           "concurrency": 10,
-          "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+          "runnerImage": "hub.dataloop.ai/dtlpy-runner-images/cpu:python3.12_opencv",
           "autoscaler": {
             "type": "rabbitmq",
             "minReplicas": 0,
@@ -122,7 +122,7 @@
         "runtime": {
           "podType": "regular-xs",
           "concurrency": 10,
-          "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+          "runnerImage": "hub.dataloop.ai/dtlpy-runner-images/cpu:python3.12_opencv",
           "autoscaler": {
             "type": "rabbitmq",
             "minReplicas": 0,
