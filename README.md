@@ -1,13 +1,13 @@
-# Dataloop Image Quality Scoring App
+# DDOE Image Quality Scoring App
 
 This application processes images to compute two quality scores: blurriness and darkness. These scores help in
-evaluating the visual quality of images uploaded to the Dataloop platform.
+evaluating the visual quality of images uploaded to the DDOE platform.
 
 ## Introduction
 
-The Dataloop Image Quality Scoring App calculates blurriness and darkness scores for images in the Dataloop platform.
+The DDOE Image Quality Scoring App calculates blurriness and darkness scores for images in the DDOE platform.
 These scores are useful for assessing image quality in various applications such as automated inspections, dataset
-curation, and machine learning preprocessing. This app is also integrated in Dataloop clean up tab.
+curation, and machine learning preprocessing. This app is also integrated in DDOE clean up tab.
 
 ## Features
 
@@ -28,11 +28,11 @@ scores indicating darker images.
 ## Requirements
 
 - Python 3.8 or higher
-- Dataloop SDK
+- DDOE SDK
 - OpenCV
 - NumPy
 
-## Installation - Dataloop's Marketplace
+## Installation - DDOE's Marketplace
 
 Go to Marketplace, application tab, and install the app: ```Quality scores calculator```
 

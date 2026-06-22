@@ -6,7 +6,7 @@
   "scope": "public",
   "attributes": {
     "Category": "Application",
-    "Provider": "Dataloop",
+    "Provider": "DDOE",
     "Application Type": ["Function","Pipeline Node"],
     "Media Type": [
       "Image"
